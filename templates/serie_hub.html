@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemunck</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_general.css') }}">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}"> <!-- permet que si on clique sur le logo CM, sa nous ramème à la page d'acceuille du sitweb -->
+                <img src="{{ url_for('static', filename='CM_logo.png') }}" alt="Company Logo"><!-- permet de mettre le logo, et si le logo n'a pas chargé il y a le mot ''Comapny Logo'' qui va être à la place de l'image -->
+            </a>
+        </div>
+    </header>
+
+    <h1 id="titre"><center>CineMunck</center></h1>
+
+    <!-- Ligne horizontale pour séparer les éléments -->
+    <hr class="half-line">
+
+    <!--  ajoute un Search Bar -->
+    <div class="search-bar-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+
+    <!-- Ligne horizontale pour séparer les éléments -->
+    <hr class="half-line">
+
+    <!-- les buttons du menu -->
+    <div class="button-container">
+        <a href="{{ url_for('les_series') }}" class="rectangle-button">SERIES</a>
+        <a href="{{ url_for('les_saisons') }}" class="rectangle-button">SAISONS</a>
+        <a href="{{ url_for('les_episodes') }}" class="rectangle-button">ÉPISODES</a>
+        <a href="{{ url_for('les_personnes') }}" class="rectangle-button">PERSONNES</a>
+        <a href="{{ url_for('les_platformes') }}" class="rectangle-button">PLATFORMES</a>
+        <a href="{{ url_for('jojo_saison_name') }}" class="rectangle-button">LES AVENTURES BIZZARES DE JOJO</a>
+        <a href="{{ url_for('add_comment') }}" class="rectangle-button">COMMENTAIRES</a>
+        <a href="{{ url_for('serie_platforme') }}" class="rectangle-button">SERIES GRATUITES</a>
+        <a href="{{ url_for('nb_serie_gratuit') }}" class="rectangle-button">NOMBRE DE SERIES GRATUITES</a>
+        <a href="{{ url_for('platforme_payant') }}" class="rectangle-button">PLATFORMES PAYANTES</a>
+        <a href="{{ url_for('home_admin') }}" class="rectangle-button">ADMINS</a>
+
+        
+    </div>
+    
+    <script src="{{ url_for('static', filename='java_hub.js') }}"></script>
+</body>
+</html>

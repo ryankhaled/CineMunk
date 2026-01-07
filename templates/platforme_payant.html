@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_admin.css') }}">
+</head>
+
+<header>
+    <div class="logo">
+        <a href="{{ url_for('home') }}"> <!-- permet que si on clique sur le logo CM, sa nous ramème à la page d'acceuille du sitweb -->
+            <img src="{{ url_for('static', filename='CM_logo.png') }}" alt="Company Logo"><!-- permet de mettre le logo, et si le logo n'a pas chargé il y a le mot ''Comapny Logo'' qui va être à la place de l'image -->
+        </a>
+    </div>
+</header>
+<br>
+<br>
+<br>
+<br>
+
+
+<body>
+<table>
+    <thead>
+        <tr>
+            <th>Nom Platforme</th>
+            <th>Prix</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for nomplatforme, prix in payant %}<!-- Boucle pour afficher la liste des séries payantes -->
+            <tr>
+                <td>{{nomplatforme}}</td>
+                <td>{{prix}}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>

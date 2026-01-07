@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemunck</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_general.css') }}">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}"> <!-- permet que si on clique sur le logo CM, sa nous ramème à la page d'acceuille du sitweb -->
+                <img src="{{ url_for('static', filename='CM_logo.png') }}" alt="Company Logo"><!-- permet de mettre le logo, et si le logo n'a pas chargé il y a le mot ''Comapny Logo'' qui va être à la place de l'image -->
+            </a>
+        </div>
+    </header>
+
+    <h1 id="titre"><center>Saisons</center></h1>
+
+    <!-- Ligne horizontale pour séparer les éléments -->
+    <hr class="half-line">
+
+    <!--  ajoute un Search Bar -->
+    <div class="search-bar-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+
+    <!-- Ligne horizontale pour séparer les éléments -->
+    <hr class="half-line">
+
+
+
+<br>
+<br>
+<br>
+<br>
+
+
+<body>
+    <div class="tables"><!-- Conteneur pour les tables, avec style défini dans le CSS -->
+        {% for idsaison in ssaison %} <!-- Boucle pour afficher chaque saison -->
+            <div class="attributs">
+                <div class="image-container">
+                    <img src="{{idsaison[4]}}"><!-- prend le url de la colonne urlserie et l'affiche sous forme d'image   -->
+                </div>
+                <!-- il y a une tuple, on a choisi donc les éléments sous forme de idsaison[n] à partir du tableau donner par la requête SQL écrite et trouvé dans le fichier cinemunckdb.py-->
+                <p><b>Saison:</b> {{idsaison[1]}}</p><!-- affiche le titre de la saison qui est l'élément de la colonne nomsaison   -->
+                <p><b>nombre d'épisode:</b> {{idsaison[2]}}</p> <!-- affiche le nombre d'épisode dans la saison qui est l'élément de la colonne nbepisode   -->         
+                <p><b>Série:</b> {{idsaison[3]}}</p><!-- affiche le titre de la série qui est l'élément de la colonne nomserie  -->
+            </div>
+        
+        {% endfor %}
+    </div>
+</body>
+</html>

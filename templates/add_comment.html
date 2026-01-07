@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Méta-donnée pour le contrôle de la mise à l'échelle et de la largeur de la page sur les appareils mobiles -->
+    <title>Cinemunck</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_commentaire.css') }}">
+</head>
+    <title>Add Commment</title>
+</head>
+
+    <h1 id="titre"><center>Votre opinion compte beaucoup!!!</center></h1>
+<body> <!-- les lignes de code en bas permettent d'ajouter des éléments dans le fichier DB, dans la table Commentaire (idcommentaire est auto incrémenté; le commentaire donner rentre dans la colonne nomcommentaire; associé le commentaire à une série pour savoir de quelle série on parle en mettant le ID de la Série) -->
+    <form method="POST">         <!-- Début du formulaire, avec la méthode POST pour envoyer les données -->
+        {{ form.hidden_tag() }} 
+        <label for="nom_commentaire">Nom:</label>
+        {{ form.nom_commentaire.label }}
+        {{ form.nom_commentaire() }}
+    <!--ajout d'élément dans la colonne nomcommentaire -->
+        <label for="serie">Choisir:</label>
+        {{ form.idserie.label }}
+        {{ form.idserie() }}    
+            <!--choisir la série et va mettre son idserie -->
+        <input type="submit" value="Add Data">     <!--validé l'ajout des éléments dans le fichier DB -->
+    </form>
+    <a href="{{ url_for('Commentaire_de') }}">Voir les commentaires</a>     <!--voir la table commentaire, c'est à dire voir tout les commentaires ajouté dans le fichier DB à partir de cette page HTML (add_comment.html) -->
+</body>
+</html>

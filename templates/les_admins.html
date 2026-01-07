@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemunck</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_general.css') }}">
+</head>
+
+
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}">  <!-- permet que si on clique sur le logo CM, sa nous ramème à la page d'acceuille du sitweb -->
+                <img src="{{ url_for('static', filename='CM_logo.png') }}" alt="Company Logo"><!-- permet de mettre le logo, et si le logo n'a pas chargé il y a le mot ''Comapny Logo'' qui va être à la place de l'image -->
+            </a>
+        </div>
+    </header>
+
+    <h1 id="titre"><center>Vue Admins</center></h1>
+
+    <!-- The line to seperate elements -->
+    <hr class="half-line">
+
+    <!-- Search Bar -->
+    <div class="search-bar-container">
+        <input type="text" class="search-bar" placeholder="Search...">
+    </div>
+
+    <!-- The line to seperate elements -->
+    <hr class="half-line">
+
+    <!-- Buttons -->
+    <div class="button-container">
+        <a href="{{ url_for('Serie_de') }}" class="rectangle-button">SERIE</a>
+        <a href="{{ url_for('Episode_de') }}" class="rectangle-button">EPISODE</a>
+        <a href="{{ url_for('Personne_de') }}" class="rectangle-button">PERSONNE</a>
+        <a href="{{ url_for('Platforme_de') }}" class="rectangle-button">PLATFORME</a>
+        <a href="{{ url_for('Commentaire_de') }}" class="rectangle-button">COMMENTAIRE</a>
+        <a href="{{ url_for('Genre_de') }}" class="rectangle-button">GENRE</a>
+        <a href="{{ url_for('Fonction_de') }}" class="rectangle-button">FONCTION</a>
+
+        
+    </div>
+    
+    <script src="{{ url_for('static', filename='java_hub.js') }}"></script>
+</body>
+</html>

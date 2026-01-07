@@ -1,0 +1,175 @@
+/* style_hub.css */
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/static/space.jpg');
+    background-color: #f0f0f0;
+    margin: 0;
+    padding-top: 80px;
+}
+
+
+h2 {
+    counter-increment: nump;
+    counter-reset: numsp;
+    background-color: rgb(204, 255, 252);
+    border-style:outset;
+    color:#169593;
+}
+
+#titre {
+    font-family: 'Montserrat';
+    font-size: 6vw;
+    background: url('/static/blackhole.png');
+    background-position: center center;
+    background-color:rgb(52, 66, 122);
+    background-size: cover;
+    border-style:solid;
+    color: #3a3d7c;
+}
+
+/* Heading Styles */
+h4 {
+    color: #38448b; /* Green text color */
+    background-color: #f9f9f9; /* Light gray background color */
+    padding: 12px; /* Increased padding for better spacing */
+    margin: 10px 0; /* Adjusted margin for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight box shadow */
+}
+
+
+nav {
+    margin-bottom: 20px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+li {
+    display: inline;
+    margin-right: 15px; 
+}
+
+
+a {
+    text-decoration: none;
+    color: #ffffff; 
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+
+a:hover {
+    border-bottom: 2px solid #ffffff;
+
+}
+
+
+/* Header Styles */
+header {
+    background-color: #0b1133;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+header .logo img {
+    height: 50px; /* Adjust size as needed */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    display: inline; /* For main navigation */
+    margin-right: 15px; /* For main navigation */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #ffffff; /* For main navigation */
+    border-bottom: 2px solid transparent; /* For main navigation */
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+    border-bottom: 2px solid #ffffff; /* For main navigation */
+}
+
+
+
+
+
+/* Line Separator Style */
+.half-line {
+    width: 50%;
+    border-top: 1px solid black;
+    margin: 20px auto; /* Centered with spacing */
+}
+
+/* Search Bar Style */
+.search-bar-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Buttons Style */
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.rectangle-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    border: 2px solid black;
+    border-radius: 10px; /* curvy corners */
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.rectangle-button:hover {
+    background-color: #f0f0f0;
+}
+
+

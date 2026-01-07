@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_admin.css') }}">
+</head>
+
+<header>
+    <div class="logo">
+        <a href="{{ url_for('home') }}"> <!-- permet que si on clique sur le logo CM, sa nous ramème à la page d'acceuille du sitweb -->
+            <img src="{{ url_for('static', filename='CM_logo.png') }}" alt="Company Logo"><!-- permet de mettre le logo, et si le logo n'a pas chargé il y a le mot ''Comapny Logo'' qui va être à la place de l'image -->
+        </a>
+    </div>
+</header>
+<br>
+<br>
+<br>
+<br>
+
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Series ID</th>
+                <th>Series Name</th>
+                <th>Release Date</th>
+                <th>Total Episodes</th>
+                <th>Number of Seasons</th>
+                <th>Genre ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for idserie, nomserie, datesortie, episodetotale, nbsaison, idgenre in Serie %} <!-- Boucle pour afficher tout les éléments de la table Serie-->
+                <tr>
+                    <td>{{idserie}}</td>
+                    <td>{{nomserie}}</td>
+                    <td>{{datesortie}}</td>
+                    <td>{{episodetotale}}</td>
+                    <td>{{nbsaison}}</td>
+                    <td>{{idgenre}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

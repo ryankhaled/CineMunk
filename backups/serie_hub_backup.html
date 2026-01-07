@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_jojo.css') }}">
+</head>
+
+<header>
+    <div class="logo">
+        <a href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='CM_logo.png') }}" alt="Company Logo">
+        </a>
+    </div>
+</header>
+<br>
+<br>
+<br>
+<br>
+
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de Serie Gratuit</th>
+                <!-- <th>Nom de Serie</th> -->
+            </tr>
+        </thead>
+        <tbody>
+            {%for idplatforme in sergrat %}
+                <tr>
+                    <td>{{idplatforme[0]}}</td>
+                    <!-- <td>{{nomserie}}</td> -->
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+
+
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Personne</th>
+                <th>naissance</th>
+                <th>Fonction</th>
+                <th>url</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for idpersonne in personne %}
+                <tr>
+                    <td>{{idpersonne[1]}}</td>
+                    <td>{{idpersonne[2]}}</td>
+                    <td>{{idpersonne[3]}}</td>
+                    <td>{{idpersonne[4]}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+
+
+<p><b>Date de naissance:</b><br> {{ date_de_naissance }}</p>            
+<p><b>Nationalité:</b> {{ nationalite }}</p>
+<p><b>Début de carrière:</b> {{ debut_de_carriere }}</p>
+<p><b>Label:</b> {{ label }}</p>

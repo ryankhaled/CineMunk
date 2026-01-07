@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cinemunck</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style_hub.css') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="{{ url_for('home') }}">
+                <img src="{{ url_for('static', filename='CM_logo.png') }}" alt="Company Logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#contact">Contact Us</a></li>
+                <li><a href="#credits">Credits</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 id="titre"><center>Cinemunck</center></h1>
+    <!-- Navigation Links -->
+    <nav>
+        <ul>
+            <li><a href="http://127.0.0.1:8080/admin_Serie">Les Séries</a></li>
+            <li><a href="http://127.0.0.1:8080/admin_Saison">Les Saisons</a></li>
+            <li><a href="http://127.0.0.1:8080/admin_Episode">Les Épisodes</a></li>
+            <li><a href="http://127.0.0.1:8080/admin_Platforme">Les Platformes</a></li>
+            <li><a href="http://127.0.0.1:8080/admin_Personne">Les Personnes</a></li>
+            <li><a href="http://127.0.0.1:8080/admin_Genre">Les Genres</a></li>
+            <li><a href="http://127.0.0.1:8080/admin_Fonction">Les Fonctions</a></li>
+            <li><a href="http://127.0.0.1:8080/admin_Commentaire">Les Commentaire</a></li>
+            <li><a href="http://127.0.0.1:8080/platforme_payant">Les Platformes payantes</a></li>
+            <li><a href="http://127.0.0.1:8080/serie_platforme">Les Series sur platformes gratuites</a></li>
+            <li><a href="http://127.0.0.1:8080/nbserie_gratuit">Le nombre de serie gratuites</a></li>
+            <li><a href="http://127.0.0.1:8080/jojo">Jojo's Bizarre Adventures</a></li>
+            
+
+        </ul>
+    </nav>
+    <th>Les Series disponibles</th>
+
+    <!-- Serie Data -->
+    {% for elem in Serie %}
+        <h4>{{ elem }}</h4>
+    {% endfor %}
+    <script src="{{ url_for('static', filename='java_hub.js') }}"></script>
+</body>
+</html>

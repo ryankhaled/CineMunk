@@ -1,0 +1,221 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/static/space.jpg');
+    background-color: #f0f0f0;
+    margin: 0;
+    padding-top: 80px;
+}
+
+#titre {
+    font-family: 'Montserrat';
+    font-size: 6vw;
+    background: url('/static/blackhole.png');
+    background-position: center center;
+    background-color:rgb(52, 66, 122);
+    background-size: cover;
+    border-style:solid;
+    color: #3a3d7c;
+}
+
+
+
+
+
+
+
+
+
+/*---UNDER THIS MESSAGE WAS THE OLD ADMIN CSS THAT WE COMBINED*/
+
+
+/* Improved styles.css */
+
+/* Body Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url('/static/space.jpg') center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff; /* Set a solid white background color for the table */
+}
+
+/* Table Cell Styles */
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+    background-color: #fff; /* Set a solid white background color for table cells */
+}
+
+/* Header Cell Styles */
+th {
+    background-color: #38448b;
+    color: white;
+}
+
+/* Hover Styles */
+tr:hover {
+    background-color: #e7f5e6;
+}
+
+/* Additional Typography Enhancements */
+h1, h2, h3 {
+    font-weight: 600;
+    line-height: 1.5;
+    color: #ff6c6c;
+}
+
+/* Heading 4 Styles */
+h4 {
+    color: #ff6565;
+    background-color: #f9f9f9;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Navigation Styles */
+nav {
+    margin-bottom: 20px;
+}
+
+/* List Styles */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* List Item Styles */
+li {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* Link Styles */
+a {
+    text-decoration: underline;
+    color: #ff6186;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+/* Hover Styles for Links */
+a:hover {
+    border-bottom: 2px solid #ff6f61;
+}
+
+
+/* header*/
+
+/* Heading Styles */
+h4 {
+    color: #435fff; /* Green text color */
+    background-color: #f9f9f9; /* Light gray background color */
+    padding: 12px; /* Increased padding for better spacing */
+    margin: 10px 0; /* Adjusted margin for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight box shadow */
+}
+
+
+nav {
+    margin-bottom: 20px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+li {
+    display: inline;
+    margin-right: 15px; 
+}
+
+
+a {
+    text-decoration: none;
+    color: #ffffff; 
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+
+a:hover {
+    border-bottom: 2px solid #ffffff;
+
+}
+
+
+/* Header Styles */
+header {
+    background-color: #0b1133;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+header .logo img {
+    height: 50px; /* Adjust size as needed */
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+    display: inline; /* For main navigation */
+    margin-right: 15px; /* For main navigation */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    color: #ffffff; /* For main navigation */
+    border-bottom: 2px solid transparent; /* For main navigation */
+}
+
+nav ul li a:hover {
+    background-color: #ddd;
+    border-bottom: 2px solid #ffffff; /* For main navigation */
+}
+
+
+
+label[for="nom_commentaire"],
+label[for="idserie"] {
+    color: white;
+}

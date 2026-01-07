@@ -1,0 +1,291 @@
+/* Improved styles.css */
+
+/* style_hub.css */
+
+/* General Styles --------------------------------*/
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/static/space.jpg');
+    background-color: #f0f0f0;
+    margin: 0;
+    padding-top: 80px;
+}
+
+
+h2 {
+    counter-increment: nump;
+    counter-reset: numsp;
+    background-color: rgb(204, 255, 252);
+    border-style:outset;
+    color:#169593;
+}
+
+#titre {
+    font-family: 'Montserrat';
+    font-size: 6vw;
+    background: url('/static/blackhole.png');
+    background-position: center center;
+    background-color:rgb(52, 66, 122);
+    background-size: cover;
+    border-style:solid;
+    color: #3a3d7c;
+}
+
+/* Heading Styles */
+h4 {
+    color: #38448b; /* Green text color */
+    background-color: #f9f9f9; /* Light gray background color */
+    padding: 12px; /* Increased padding for better spacing */
+    margin: 10px 0; /* Adjusted margin for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight box shadow */
+}
+
+
+
+/* Body Styles */
+body {
+    font-family: 'Open Sans', sans-serif;
+    background: url('/static/space.jpg') center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+}
+
+
+
+/* CSS of the buttons that leads to the different types of tables in the HUB -----------*/
+
+
+h2 {
+    counter-increment: nump;
+    counter-reset: numsp;
+    background-color: rgb(204, 255, 252);
+    border-style:outset;
+    color:#169593
+}
+
+#titre {
+    font-family: 'Montserrat';
+    font-size: 6vw;
+    background: url('/static/blackhole.png');
+    background-position: center center;
+    background-color:rgb(52, 66, 122);
+    background-size: cover;
+    border-style:solid;
+    color: #3a3d7c
+  }
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('/static/space.jpg');
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Heading Styles */
+
+
+nav {
+    margin-bottom: 20px;
+}
+
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+
+li {
+    display: inline;
+    margin-right: 15px; 
+}
+
+
+a {
+    text-decoration: none;
+    color: #ffffff; 
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+
+a:hover {
+    border-bottom: 2px solid #ffffff;
+
+}
+
+
+
+/* Table Styles -------------------------------------------------*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #fff; /* Set a solid white background color for the table */
+}
+
+/* Table Cell Styles */
+th, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 12px;
+    background-color: #fff; /* Set a solid white background color for table cells */
+}
+
+/* Header Cell Styles */
+th {
+    background-color: #38448b;
+    color: white;
+}
+
+
+/* Additional Typography Enhancements */
+h1, h2, h3 {
+    font-weight: 600;
+    line-height: 1.5;
+    color: #38448b;
+}
+
+
+
+
+
+/* header------------------------------------------------*/
+
+/* Heading Styles */
+h4 {
+    color: #38448b; /* Green text color */
+    background-color: #f9f9f9; /* Light gray background color */
+    padding: 12px; /* Increased padding for better spacing */
+    margin: 10px 0; /* Adjusted margin for better spacing */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slight box shadow */
+}
+
+
+
+
+
+/* Header Styles */
+header {
+    background-color: #0b1133;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+header .logo img {
+    height: 50px; /* Adjust size as needed */
+}
+
+
+
+
+
+
+/* Line Separator Style----------------------------------- */
+.half-line {
+    width: 50%;
+    border-top: 1px solid black;
+    margin: 20px auto; /* Centered with spacing */
+}
+
+/* Search Bar Style--------------------------------------- */
+.search-bar-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.search-bar {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Buttons Style ----------------------------------*/
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.rectangle-button {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px 30px;
+    border: 2px solid black;
+    border-radius: 10px; /* curvy corners */
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    background-color: white;
+    transition: background-color 0.3s;
+}
+
+.rectangle-button:hover {
+    background-color: #f0f0f0;
+}
+
+/*The boxes to put the elements ----------------------------*/
+.attributs {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%; /* Add this line */
+    overflow: hidden; /* Add this line */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 100%; /* Adjust the font size as needed */
+    transition: 1s;
+}
+
+.attributs:hover{
+    transform: scale(1.05); /* Scale up by 5% on hover */
+    transition: 1s;
+    
+}
+
+.attributs img{
+    border-radius: 5px;
+    background-color: white; /* White borders */
+    padding: 2px;
+    border-radius: 5px; /* Rounded corners for the image container */
+    width: 200px;
+}
+
+.image-container {
+    margin-bottom: 15px;
+}
+
+#chanson_image{
+    margin-top: 15px;
+}
+
+.attributs p:not(:last-child) {
+    margin-bottom: 0px; /* Adjust the margin as needed */
+}
+
+
+.tables {
+    display: grid;
+    grid-template-columns: repeat(5, auto); 
+    gap: 40px; /* Adjust the gap between items */
+}
+
+
+
