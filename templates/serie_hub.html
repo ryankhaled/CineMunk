@@ -24,7 +24,11 @@
 
     <!--  ajoute un Search Bar -->
     <div class="search-bar-container">
-        <input type="text" class="search-bar" placeholder="Search...">
+        <input type="text" class="search-bar" placeholder="Search series or actors..." aria-label="Search series or actors">
+        <div class="search-results" aria-live="polite">
+            <ul class="search-results-list" role="list"></ul>
+            <p class="search-results-empty" hidden>No results found.</p>
+        </div>
     </div>
 
     <!-- Ligne horizontale pour séparer les éléments -->
@@ -46,7 +50,10 @@
 
         
     </div>
-    
+
+    <script>
+        window.searchData = {{ search_data|tojson }};
+    </script>
     <script src="{{ url_for('static', filename='java_hub.js') }}"></script>
 </body>
 </html>

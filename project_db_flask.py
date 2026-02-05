@@ -16,11 +16,17 @@ app.config['SECRET_KEY'] = SECRET_KEY
 def home():
     # print()
     Serie = db.allSerie()
+    Personne = db.allPersonne()
     #print(Serie)
-    names=[]
+    names = []
     for i in Serie:
         names.append(i[1])
-    return render_template("serie_hub.html", Serie=names)
+    person_names = []
+    for i in Personne:
+        person_names.append(i[1])
+    search_data = [{"type": "Serie", "name": name} for name in names]
+    search_data.extend({"type": "Personne", "name": name} for name in person_names)
+    return render_template("serie_hub.html", Serie=names, search_data=search_data)
 
 
 
